@@ -12,13 +12,13 @@ namespace Lab_3_abril_FJJI
         {
             Console.WriteLine("Bienvenido a Arriendos de vehiculos 'Git Gud'");
 
-            Sucursales sucursales = new Sucursales("San Carlos");
+            Sucursal sucursal = new Sucursal("San Carlos");
             bool verificar = false;
             while (verificar == false)
             {
                 Console.WriteLine("Ingrese sucursal");
-                string sucursal = Console.ReadLine();
-                VerificarSucursal(sucursal);
+                string lugar = Console.ReadLine();
+                sucursal.VerificarSucursal(lugar);
 
             }
 

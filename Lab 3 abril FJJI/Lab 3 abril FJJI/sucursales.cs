@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Lab_3_abril_FJJI
 {
-    public class Sucursales
+    public class Sucursal
     {
         public string sede;
         List<string> LasSucursales;
 
-        public Sucursales(string LaSucursal)
+        public Sucursal(string LaSucursal)
         {
             sede = LaSucursal;
 
