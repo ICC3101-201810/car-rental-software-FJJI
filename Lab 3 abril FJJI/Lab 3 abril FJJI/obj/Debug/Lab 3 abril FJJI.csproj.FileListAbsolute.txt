@@ -1,0 +1,7 @@
+C:\Users\Francisco\Desktop\car-rental-software-FJJI\Lab 3 abril FJJI\Lab 3 abril FJJI\obj\Debug\Lab 3 abril FJJI.csprojResolveAssemblyReference.cache
+C:\Users\Francisco\Desktop\car-rental-software-FJJI\Lab 3 abril FJJI\Lab 3 abril FJJI\obj\Debug\Lab 3 abril FJJI.csproj.CoreCompileInputs.cache
+C:\Users\Francisco\Desktop\car-rental-software-FJJI\Lab 3 abril FJJI\Lab 3 abril FJJI\bin\Debug\Lab 3 abril FJJI.exe.config
+C:\Users\Francisco\Desktop\car-rental-software-FJJI\Lab 3 abril FJJI\Lab 3 abril FJJI\bin\Debug\Lab 3 abril FJJI.exe
+C:\Users\Francisco\Desktop\car-rental-software-FJJI\Lab 3 abril FJJI\Lab 3 abril FJJI\bin\Debug\Lab 3 abril FJJI.pdb
+C:\Users\Francisco\Desktop\car-rental-software-FJJI\Lab 3 abril FJJI\Lab 3 abril FJJI\obj\Debug\Lab 3 abril FJJI.exe
+C:\Users\Francisco\Desktop\car-rental-software-FJJI\Lab 3 abril FJJI\Lab 3 abril FJJI\obj\Debug\Lab 3 abril FJJI.pdb

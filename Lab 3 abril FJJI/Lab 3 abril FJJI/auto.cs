@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab_3_abril_FJJI
 {
-    class Auto : Vehiculo 
-    {
-    }
+    //class Auto : Vehiculo 
+    //{
+    //}
 }
