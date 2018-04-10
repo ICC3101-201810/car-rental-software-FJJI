@@ -9,42 +9,16 @@ namespace Lab_3_abril_FJJI
     public class Sucursal
     {
         public string sede;
-        List<string> LasSucursales;
+        List<Arriendo> arriendos = new List<Arriendo>();
+
 
         public Sucursal(string LaSucursal)
         {
             sede = LaSucursal;
 
         }
-
-        public bool AgregarSucursal (string sede)
-        {
-            foreach (string Lugar in LasSucursales)
-            {
-                if (sede == Lugar)
-                {
-                    Console.WriteLine("La sucursal " + sede + " ya existe");
-                    return false;
-                }
-
-            }
-            LasSucursales.Add(sede);
-            Console.WriteLine("La sucursal" + sede + " ha sido agregada");
-            return true;
-
-        }
-        public bool VerificarSucursal(string sede)
-        {
-            foreach (string Lugar in LasSucursales)
-            {
-                if (sede == Lugar )
-                {
-                    Console.WriteLine();
-                    return true;
-                }
-            }
-            Console.WriteLine("La Sede seleccionada no existe");
-            return false;
-        }
     }
 }
+
+
+  

@@ -23,10 +23,11 @@ namespace Lab_3_abril_FJJI
                 if (sede == Lugar.sede)
                 {
                     Console.WriteLine();
+                    //la sucursal existe, pero no es necesario decirlo al cliente aqui
                     return true;
                 }
             }
-            Console.WriteLine("La Sede seleccionada no existe");
+            //la sucursal no existe
             return false;
         }
         public bool AgregarSucursal(string sede)

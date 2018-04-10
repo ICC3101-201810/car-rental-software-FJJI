@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab_3_abril_FJJI
 {
-    abstract class Accesorios
+     public abstract class Accesorios
     {
         string Radio;
         string GPS;
@@ -15,7 +15,7 @@ namespace Lab_3_abril_FJJI
         string SillaInfantil;
 
 
-        public abstract bool VerificarAccesorio(); 
+        abstract public  bool VerificarAccesorio(); 
 
 
         //radios con bluetooth

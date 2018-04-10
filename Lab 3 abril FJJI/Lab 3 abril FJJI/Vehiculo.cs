@@ -6,14 +6,16 @@ using System.Threading.Tasks;
 
 namespace Lab_3_abril_FJJI
 {
-    abstract class Vehiculo : Accesorios
+     public abstract class Vehiculo : Accesorios
     {
-        string Marca;
-        string Patente;
-        int año;
+        protected string marca;
+        protected string patente;
+        protected int año;
+        protected int costo;
 
         
-        /*auto;
+        
+        /*  auto;
             acuatico;
             moto;
             camion;
