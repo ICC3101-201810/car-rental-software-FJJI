@@ -8,7 +8,7 @@ namespace Lab_3_abril_FJJI
 {
     class DirectorioSucursales
     {
-        List<Sucursal>  directorio ;
+        List<Sucursal> directorio;
 
         public DirectorioSucursales()
         {
@@ -32,7 +32,7 @@ namespace Lab_3_abril_FJJI
         }
         public bool AgregarSucursal(string sede)
         {
-            if (directorio == null)
+            if (directorio.LongCount() == 0)
             {
                 Sucursal NuevaSede1 = new Sucursal(sede);
                 directorio.Add(NuevaSede1);
@@ -49,6 +49,20 @@ namespace Lab_3_abril_FJJI
             Sucursal NuevaSede = new Sucursal(sede);
             directorio.Add(NuevaSede);
             return true;
+        }
+
+        public void ImprimirSucursales()
+        {
+            foreach (Sucursal suc in  directorio)
+            {
+                Console.WriteLine(suc.sede);
+            }
+        }
+
+        public long   Tamano()
+        {
+            long  a = (directorio.LongCount());
+            return a;
         }
     }
 }

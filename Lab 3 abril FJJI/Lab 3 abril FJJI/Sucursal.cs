@@ -10,12 +10,19 @@ namespace Lab_3_abril_FJJI
     {
         public string sede;
         List<Arriendo> arriendos = new List<Arriendo>();
+        List<Vehiculo> vehiculos = new List<Vehiculo>();
 
 
         public Sucursal(string LaSucursal)
         {
             sede = LaSucursal;
 
+        }
+
+        public void  AgregarVehiculo(Vehiculo vehiculo)
+        {
+            vehiculos.Add(vehiculo);
+            Console.WriteLine("");
         }
     }
 }
