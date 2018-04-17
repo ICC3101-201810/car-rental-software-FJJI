@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab_3_abril_FJJI
 {
-    class Arriendo : Cliente
+    class Arriendo 
     {
         List<string> Arriendos;
         Cliente cliente;

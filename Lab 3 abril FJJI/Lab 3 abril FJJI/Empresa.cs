@@ -9,5 +9,8 @@ namespace Lab_3_abril_FJJI
     class Empresa : Cliente
     {
         //autorizacion para operar vehiculos del tipo asociado
+        public Empresa(string Nombre, string RUT) : base(Nombre, RUT)
+        {
+        }
     }
 }

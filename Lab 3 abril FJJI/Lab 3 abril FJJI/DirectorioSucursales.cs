@@ -92,5 +92,44 @@ namespace Lab_3_abril_FJJI
             long a = clientes.LongCount();
             return a;
         }
+
+        public bool BuscarCliente (string nombre)
+        {
+            foreach(Cliente cliente in clientes)
+            {
+                if (cliente.GetNombre() == nombre)
+                {
+                    return true;
+                }
+            }
+            Console.WriteLine("Cliente no encontrado");
+            return false;
+        }
+
+        public bool MostrarVehiculos(string sucursal)
+        {
+            foreach (Sucursal sede in directorio)
+            {
+                if (sede.sede == sucursal)
+                {
+                    sede.MostrarVehiculos();
+                    return true;
+                }
+            }
+            return false;
+        }
+        public bool Arriendo(string id, string cliente, string sucursal) //nombre del cliente
+        {
+            foreach (Sucursal sede in directorio)
+            {
+                if (sede.sede == sucursal)
+                {
+                    if (sede.ArrendarVehiculo(id, cliente))
+                        return true;
+
+                }
+            }
+            return false;
+        }
     }
 }

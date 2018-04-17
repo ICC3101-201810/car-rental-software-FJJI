@@ -15,10 +15,9 @@ namespace Lab_3_abril_FJJI
         bool LicenciaLancha = false;
 
 
-        public Persona(string TuNombre, string TuRut) 
+        public Persona(string TuNombre, string TuRut) :base (TuNombre,TuRut)
         {
-            Nombre = TuNombre;
-            Rut = TuRut;
+            
         }
         
         public bool AgregarLicencia (string tipo)
@@ -39,5 +38,6 @@ namespace Lab_3_abril_FJJI
             }
             return true;
         }
+
     }
 }

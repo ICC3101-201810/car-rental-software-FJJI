@@ -6,11 +6,21 @@ using System.Threading.Tasks;
 
 namespace Lab_3_abril_FJJI
 {
-    abstract class Cliente
+    public abstract class Cliente
     {
-        public string Nombre;
-        public string Rut;
-        public string[] licencia; 
+        string Nombre;
+        string RUT;
+
+        public Cliente(string Nombre, string  RUT)
+        {
+            this.Nombre = Nombre;
+            this.RUT = RUT;
+        }
+
+        public string GetNombre()
+        {
+            return Nombre;
+        }
     }
 
 }

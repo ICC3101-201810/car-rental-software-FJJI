@@ -6,15 +6,36 @@ using System.Threading.Tasks;
 
 namespace Lab_3_abril_FJJI
 {
-     public abstract class Vehiculo : Accesorios
+    public class Vehiculo
     {
-        protected string marca;
-        protected string patente;
-        protected int año;
-        protected int costo;
+        public enum TipoVehiculo { auto, moto, lancha, VehiculoPesado}
 
-        
-        
+        string marca;
+        string id;
+        int costo;
+        TipoVehiculo tipo;
+
+        public Vehiculo (TipoVehiculo tipo, string ID , string marca, int costo)
+        {
+            this.tipo = tipo;
+            id = ID;
+            this.costo = costo;
+            this.marca = marca;
+
+        }
+
+        public  bool VerificarAccesorio()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string Getid ()
+        {
+            return id;
+        }
+
+
+
         /*  auto;
             acuatico;
             moto;
