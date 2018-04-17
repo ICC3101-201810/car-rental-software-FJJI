@@ -8,8 +8,9 @@ namespace Lab_3_abril_FJJI
 {
     abstract class Cliente
     {
-        protected string Nombre;
-        protected string[] licencia; 
+        public string Nombre;
+        public string Rut;
+        public string[] licencia; 
     }
 
 }

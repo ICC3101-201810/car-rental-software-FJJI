@@ -6,14 +6,38 @@ using System.Threading.Tasks;
 
 namespace Lab_3_abril_FJJI
 {
+
     class Persona : Cliente
     {
-        int Licencia;
+        bool LicenciaAuto = false;
+        bool LicenciaMoto = false;
+        bool LicenciaVehiculoPesado = false;
+        bool LicenciaLancha = false;
 
-        public Persona(int TuLicencia, string TuNombre) 
+
+        public Persona(string TuNombre, string TuRut) 
         {
-            Licencia = TuLicencia;
             Nombre = TuNombre;
+            Rut = TuRut;
+        }
+        
+        public bool AgregarLicencia (string tipo)
+        {
+            if (tipo == "moto")
+                LicenciaMoto = true; 
+            else if (tipo == "auto")
+                LicenciaAuto = true;
+            else if (tipo == "vehiculo pesado")
+                LicenciaVehiculoPesado = true;
+            else if (tipo == "lancha")
+                LicenciaLancha = true;
+
+            else
+            {
+                Console.WriteLine("Su seleccion de tipo de licencia es invalido");
+                return false;
+            }
+            return true;
         }
     }
 }

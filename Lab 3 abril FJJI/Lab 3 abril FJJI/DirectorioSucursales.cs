@@ -9,6 +9,7 @@ namespace Lab_3_abril_FJJI
     class DirectorioSucursales
     {
         List<Sucursal> directorio;
+        List<Cliente> clientes = new List<Cliente>();
 
         public DirectorioSucursales()
         {
@@ -62,6 +63,33 @@ namespace Lab_3_abril_FJJI
         public long   Tamano()
         {
             long  a = (directorio.LongCount());
+            return a;
+        }
+        
+        public bool AgregarCliente(Cliente cliente)
+        {
+            if (clientes.LongCount() == 0)
+            {
+                clientes.Add(cliente);
+                return true;
+            }
+
+            foreach (Cliente a in clientes)
+            {
+                if (cliente == a)
+                {
+                    Console.WriteLine("cliente ya existe");
+                    return false;
+                }
+            }
+            clientes.Add(cliente);
+            Console.WriteLine("El cliente " + cliente + " ha sido creado");
+            return true;
+
+        }
+        public long CantidadClientes()
+        {
+            long a = clientes.LongCount();
             return a;
         }
     }
