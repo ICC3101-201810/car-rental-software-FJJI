@@ -13,11 +13,13 @@ namespace Lab_3_abril_FJJI
         string marca;
         string id;
         int costo;
-        TipoVehiculo tipo;
+        TipoVehiculo tipo; //no me funciono como queria
+        int tipove;
+        string TipoDeVehiculo;
 
-        public Vehiculo (TipoVehiculo tipo, string ID , string marca, int costo)
+        public Vehiculo (string TipoDeVehiculo, string ID , string marca, int costo)
         {
-            this.tipo = tipo;
+            this.TipoDeVehiculo = TipoDeVehiculo;
             id = ID;
             this.costo = costo;
             this.marca = marca;

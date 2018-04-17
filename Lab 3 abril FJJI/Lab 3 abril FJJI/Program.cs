@@ -15,11 +15,10 @@ namespace Lab_3_abril_FJJI
             //directorio.AgregarSucursal(sucursal.sede);
 
             //Persona cliente = new Persona("juan", "123123123");
-            //cliente.AgregarLicencia( 2);
 
             Console.WriteLine("Bienvenido a Arriendos de vehiculos 'Git Gud'");
 
-            Console.WriteLine("\nPrecione 1 para realizar un arriendo, 2 para recibir un vehiculo ,3 para agregar sucursal, 4 para ver las sucursales disponibles, 5 para agregar vehiculo, 6 para salir\n");
+            Console.WriteLine("\nPrecione 1 para realizar un arriendo, 2 para recibir un vehiculo ,3 para agregar sucursal, 4 para ver las sucursales disponibles, 5 para agregar vehiculo, 6 para agregar nuevo vehiculo a sucursal, 7 para salir\n");
             string respuesta = Console.ReadLine();
 
             while (true)
@@ -53,7 +52,7 @@ namespace Lab_3_abril_FJJI
                     if (directorio.Tamano() == 0   )
                     {
                         Console.WriteLine("no hay sucursal creada aun, seleccione la opcion 3 para crear una\n\n");
-                        Console.WriteLine("\nPrecione 1 para realizar un arriendo, 2 para recibir un vehiculo ,3 para agregar sucursal, 4 para ver las sucursales disponibles, 5 para agregar vehiculo, 6 para salir\n");
+                        Console.WriteLine("\nPrecione 1 para realizar un arriendo, 2 para recibir un vehiculo ,3 para agregar sucursal, 4 para ver las sucursales disponibles, 5 para agregar vehiculo, 6 para agregar nuevo vehiculo a sucursal, 7 para salir\n");
                         respuesta = Console.ReadLine();
                         continue;
                     }
@@ -123,7 +122,7 @@ namespace Lab_3_abril_FJJI
                     //lugar es el nombre de la sucursal
                     directorio.MostrarVehiculos(lugar);
 
-                    Console.WriteLine("\nSeleccione vehiculo a utilizar\n");
+                    Console.WriteLine("\nSeleccione vehiculo a utilizar\n"); //hasta ahora no hay vehiculos, por lo que no se mostraran
                     string VeArrendar = Console.ReadLine();
 
                     
@@ -131,6 +130,37 @@ namespace Lab_3_abril_FJJI
 
 
 
+                }
+
+
+                if (respuesta == "6")
+                {
+                    if (directorio.Tamano() == 0)
+                    {
+                        Console.WriteLine("No hay sucursales creadas aún, favor cree una");
+                    }
+                    else
+                    {
+                        Console.WriteLine("\nSeleccione tipo de vehiculo a agreguar: auto, moto, lancha, vehiculo pesado\n");
+                        string tipo = Console.ReadLine().ToLower();
+                        while (! (tipo == "moto") | (tipo == "auto") | (tipo == "lancha") | ( tipo == "vehiculo pesado") )
+                        {
+                            Console.ForegroundColor = ConsoleColor.Black;
+                            Console.BackgroundColor = ConsoleColor.Red;
+                            Console.WriteLine("Seleccion erronea");
+                            Console.ForegroundColor = ConsoleColor.Gray;
+                            Console.BackgroundColor = ConsoleColor.Black;
+                            Console.WriteLine("\nSeleccione tipo de vehiculo a agreguar: 0 para auto, 1 para moto, 2 para lancha, 3 para vehiculo pesado\n");
+
+                        }
+                        Console.WriteLine("Ingrese patente");
+                        string patente = Console.ReadLine();
+                        Console.WriteLine("Ingrese Marca");
+                        string marca = Console.ReadLine();
+                        Console.WriteLine("ingrese costo");
+                        int costo = Console.Read();
+                        Vehiculo vehiculo = new Vehiculo(tipo, patente, marca, costo);
+                    }
                 }
 
                 if (respuesta == "4") //mostrar sucursales
@@ -143,15 +173,15 @@ namespace Lab_3_abril_FJJI
                 }
 
 
-                // falta respuesra == 5 y 2
-                if (respuesta == "6") //salir 
+                // falta respuesra == 5 y 2 y 6
+                if (respuesta == "7") //salir 
                 {
 
                     Console.WriteLine("gracias por operar con 'Git Gud'");
                     break;
                 }
 
-                Console.WriteLine("\nPrecione 1 para realizar un arriendo, 2 para recibir un vehiculo ,3 para agregar sucursal, 4 para ver las sucursales disponibles, 5 para agregar vehiculo, 6 para salir\n");
+                Console.WriteLine("\nPrecione 1 para realizar un arriendo, 2 para recibir un vehiculo ,3 para agregar sucursal, 4 para ver las sucursales disponibles, 5 para agregar vehiculo, 6 para agregar nuevo vehiculo a sucursal, 7 para salir\n");
                 respuesta = Console.ReadLine();
 
 
