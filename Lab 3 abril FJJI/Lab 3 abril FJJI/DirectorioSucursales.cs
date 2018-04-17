@@ -131,5 +131,18 @@ namespace Lab_3_abril_FJJI
             }
             return false;
         }
+
+        public bool AgregarVehiculo(Vehiculo vehiculo, string sucursal)
+        {
+            foreach (Sucursal sede in directorio)
+            {
+                if (sede.sede == sucursal)
+                {
+                    sede.AgregarVehiculo(vehiculo);
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

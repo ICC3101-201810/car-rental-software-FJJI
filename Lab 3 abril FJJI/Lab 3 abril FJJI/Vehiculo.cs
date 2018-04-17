@@ -12,12 +12,12 @@ namespace Lab_3_abril_FJJI
 
         string marca;
         string id;
-        int costo;
+        string costo;
         TipoVehiculo tipo; //no me funciono como queria
         int tipove;
         string TipoDeVehiculo;
 
-        public Vehiculo (string TipoDeVehiculo, string ID , string marca, int costo)
+        public Vehiculo (string TipoDeVehiculo, string ID , string marca, string costo)
         {
             this.TipoDeVehiculo = TipoDeVehiculo;
             id = ID;

@@ -37,8 +37,9 @@ namespace Lab_3_abril_FJJI
                         Console.WriteLine("el nombre " + lugar + " ya tiene asociado una sucursal");
                     //entramos a la sucursal
                 }
-                if (!((respuesta == "1") | (respuesta == "2") | (respuesta == "3") | (respuesta == "4") | (respuesta == "5") | (respuesta == "6")))
+                if (!((respuesta == "1") | (respuesta == "2") | (respuesta == "3") | (respuesta == "4") | (respuesta == "5") | (respuesta == "6") | (respuesta == "7")))
                 {
+                    Console.Beep();
                     Console.ForegroundColor = ConsoleColor.Black;
                     Console.BackgroundColor = ConsoleColor.Red;
                     Console.WriteLine("Seleccion erronea");
@@ -141,25 +142,36 @@ namespace Lab_3_abril_FJJI
                     }
                     else
                     {
+                        Console.WriteLine("Seleccione sucursal a agregar vehiculo \n");
+                        string lugar = Console.ReadLine();
+                        while (!(directorio.VerificarSucursal(lugar)))
+                        {
+                            Console.WriteLine("Seleccion invalida\nFavor seleccione nuevamente sucursal");
+                            lugar = Console.ReadLine();
+                        }
+                        
                         Console.WriteLine("\nSeleccione tipo de vehiculo a agreguar: auto, moto, lancha, vehiculo pesado\n");
                         string tipo = Console.ReadLine().ToLower();
-                        while (! (tipo == "moto") | (tipo == "auto") | (tipo == "lancha") | ( tipo == "vehiculo pesado") )
+                        while (!( (tipo == "moto") | (tipo == "auto") | (tipo == "lancha") | ( tipo == "vehiculo pesado") ))
                         {
+                            Console.Beep();
+                            Console.Beep();
                             Console.ForegroundColor = ConsoleColor.Black;
                             Console.BackgroundColor = ConsoleColor.Red;
                             Console.WriteLine("Seleccion erronea");
                             Console.ForegroundColor = ConsoleColor.Gray;
                             Console.BackgroundColor = ConsoleColor.Black;
-                            Console.WriteLine("\nSeleccione tipo de vehiculo a agreguar: 0 para auto, 1 para moto, 2 para lancha, 3 para vehiculo pesado\n");
-
+                            Console.WriteLine("\nSeleccione tipo de vehiculo a agreguar: auto, moto, lancha, vehiculo pesado\n");
+                            tipo = Console.ReadLine().ToLower();
                         }
                         Console.WriteLine("Ingrese patente");
                         string patente = Console.ReadLine();
                         Console.WriteLine("Ingrese Marca");
                         string marca = Console.ReadLine();
                         Console.WriteLine("ingrese costo");
-                        int costo = Console.Read();
+                        string costo = Console.ReadLine();
                         Vehiculo vehiculo = new Vehiculo(tipo, patente, marca, costo);
+                        directorio.AgregarVehiculo(vehiculo, lugar);
                     }
                 }
 
@@ -173,11 +185,15 @@ namespace Lab_3_abril_FJJI
                 }
 
 
-                // falta respuesra == 5 y 2 y 6
+                // falta respuesra == 5 y 2 
                 if (respuesta == "7") //salir 
                 {
-
+                    Console.Beep();
+                    Console.Beep();
+                    Console.BackgroundColor = ConsoleColor.Yellow;
+                    Console.ForegroundColor = ConsoleColor.Black;
                     Console.WriteLine("gracias por operar con 'Git Gud'");
+                    Console.Beep();
                     break;
                 }
 
